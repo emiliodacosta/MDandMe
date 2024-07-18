@@ -1,4 +1,4 @@
-# Welcome to your MDandMe List of Posts Expo app 👋
+# Welcome to the MDandMe List of Posts Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -40,7 +40,7 @@ In the output, you'll find options to open the app in a
 
 ![JsonServer](./assets/images/MDandME_jsonServer.png)
 
-1. For Android, you will additionally need to run the following command in which you provide the port number (in my case  `3000` as shown in the screenshot above) that your machine's `localhost` connects to when you start the `json-server`:
+6. For Android, you will additionally need to run the following command in which you provide the port number (in my case  `3000` as shown in the screenshot above) that your machine's `localhost` connects to when you start the `json-server`:
 
    ```bash
    adb reverse tcp:3000 tcp:3000
