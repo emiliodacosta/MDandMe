@@ -1,50 +1,55 @@
-# Welcome to your Expo app 👋
+# Welcome to your MDandMe List of Posts Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
 
-1. Install dependencies
+1. Install React Native project dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Install [json-server] (https://github.com/typicode/json-server/tree/v0) so you can use `data.json` as a database
 
    ```bash
-    npx expo start
+   npm install -g json-server@0.17.4
+   ```
+
+3. Start the back-end json-server
+
+   ```bash
+   json-server --watch db.json
+   ```
+
+4. Start the app
+
+   ```bash
+   npx expo start
    ```
 
 In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+![ExpoGo](./assets/images/MDandME_expoGo.png)
 
-## Get a fresh project
+5. Make sure that you are running Expo in Expo Go mode, not development mode. As shown in the screenshot above, press `s` to toggle between these two modes.
 
-When you're ready, run:
+![JsonServer](./assets/images/MDandME_jsonServer.png)
 
-```bash
-npm run reset-project
-```
+1. For Android, you will additionally need to run the following command in which you provide the port number (in my case  `3000` as shown in the screenshot above) that your machine's `localhost` connects to when you start the `json-server`:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+   ```bash
+   adb reverse tcp:3000 tcp:3000
+   ```
 
-## Learn more
+For more details on why this was necessary, see [this Stack Overflow post](https://stackoverflow.com/a/43277765/8008361).
 
-To learn more about developing your project with Expo, look at the following resources:
+## If successful, the mobile app should look like the screens below!
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+![SimulatorScreens](./assets/images/MDandME_simulatorScreens.png)
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+![SimulatorScreensComments](./assets/images/MDandME_simulatorScreensComments.png)
