@@ -8,7 +8,6 @@ import CommentListItem from './CommentListItem'
 import { Post, Comment } from '../types'
 import { editPost } from '@/utils'
 
-
 interface CommentsProps {
   post: Post
   handleReturnToList: () => void
@@ -115,7 +114,13 @@ export default function CommentsList({
 
   return (
     <>
-      <ThemedView style={styles.contentContainer}>
+      <ThemedView
+        style={{
+          paddingVertical: 16,
+          paddingLeft: 16,
+          paddingRight: parentId === null ? 16 : 0,
+        }}
+      >
         {parentId === null && (
           <>
             <Button onPress={handleReturnToPost} title='Return to Post' />
@@ -156,9 +161,10 @@ export default function CommentsList({
 }
 
 const styles = StyleSheet.create({
-  contentContainer: {
-    padding: 16,
-  },
+  // contentContainer: {
+  //   paddingVertical: 16,
+  //   paddingLeft: 16
+  // },
   commentOnOpText: {
     marginTop: 10,
     color: 'rgb(136, 136, 136)',
