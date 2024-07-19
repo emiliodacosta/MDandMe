@@ -19,7 +19,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 3. Start the back-end json-server
 
    ```bash
-   json-server --watch db.json
+   json-server --watch data.json
    ```
 
 4. Start the app
