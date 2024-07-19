@@ -161,10 +161,6 @@ export default function CommentsList({
 }
 
 const styles = StyleSheet.create({
-  // contentContainer: {
-  //   paddingVertical: 16,
-  //   paddingLeft: 16
-  // },
   commentOnOpText: {
     marginTop: 10,
     color: 'rgb(136, 136, 136)',
