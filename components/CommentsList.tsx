@@ -151,9 +151,9 @@ export default function CommentsList({
         </ThemedText>
 
         <ThemedView style={styles.commentListContainer}>
-          {Object.keys(comments).length &&
-            sortedFilteredCommentsArray &&
-            renderComments(sortedFilteredCommentsArray)}
+          {Object.keys(comments).length && sortedFilteredCommentsArray
+            ? renderComments(sortedFilteredCommentsArray)
+            : null}
         </ThemedView>
       </ThemedView>
     </>
